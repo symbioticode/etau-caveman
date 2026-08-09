@@ -1,0 +1,9 @@
+{
+  "daemon.maxConcurrent": 2,
+  "daemon.ttlSecs": 43200,
+  "daemon.idleSecs": 3600,
+  "daemon.workerTimeoutMs": 120000,
+  "daemon.aiWorkers.enabled": false,
+  "daemon.resourceThresholds.maxCpuLoad": 80,
+  "daemon.resourceThresholds.minFreeMemoryPercent": 10
+}

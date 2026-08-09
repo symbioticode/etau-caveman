@@ -26,3 +26,7 @@ Thumbs.db
 # Virtual environment
 venv/
 .venv/
+
+# RuFlo daemon runtime state (not the scheduling config itself)
+.claude-flow/*
+!.claude-flow/config.json

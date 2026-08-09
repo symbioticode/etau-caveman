@@ -69,6 +69,53 @@ python src/orchestrator.py "Ta question ici"
 > réel est `src/orchestrator.py` + `src/schemas.py`. Les refs restantes dans
 > `brainstorming/` sont des notes historiques.
 
+## Scheduling — daemon Ruflo (livré et testé 2026-08-09)
+
+> Besoin 2 (batch en heures creuses / gestion coût-quota) : couvert nativement
+> par le daemon Ruflo (`ruflo daemon`), configuré pour ce projet.
+
+**Ce qui tourne** : un daemon Ruflo en arrière-plan, propriétaire de ce
+workspace, qui exécute des workers à intervalles fixes. Aujourd'hui en mode
+**local-only ($0, aucune clé API)** : `map` (structure du code, 15 min), `audit`
+(sécurité, 10 min), `optimize` (15 min), `consolidate` (mémoire, 30 min),
+`testgaps` (20 min), `backup` (24 h), `harness` (6 h). Les workers AI
+(`--headless`) sont désactivés par défaut ; toute exécution AI future reste
+plafonnée par le budget global (`daemon budget` : 2 lancements/heure, 12/24 h).
+
+**Config** : `.claude-flow/config.json` (versionné) — daemon scoped au projet.
+
+```json
+{
+  "daemon.maxConcurrent": 2,
+  "daemon.ttlSecs": 43200,
+  "daemon.idleSecs": 3600,
+  "daemon.workerTimeoutMs": 120000,
+  "daemon.aiWorkers.enabled": false,
+  "daemon.resourceThresholds.maxCpuLoad": 80,
+  "daemon.resourceThresholds.minFreeMemoryPercent": 10
+}
+```
+
+**Superviseur** : unité `~/.config/systemd/user/ruflo-daemon.service` (instalée
+via `ruflo daemon install-supervisor`), `WorkingDirectory` = ce projet, avec
+`Restart=on-failure` + `loginctl enable-linger andrei` → le daemon **survit au
+crash, au reboot et à la déconnexion**. Testé réellement : `systemctl --user
+restart` → redémarrage auto (PID 137263 → 137577).
+
+**Vérification** :
+```bash
+ruflo daemon status          # RUNNING, workers On/Runs/Success
+ruflo daemon trigger --worker map   # exécution manuelle réelle
+ruflo daemon budget          # lancements AI : 0/2 h, 0/12 j
+systemctl --user status ruflo-daemon.service
+```
+
+**Limite documentée** : le daemon est cadencé par intervalles, pas par créneau
+horaire (pas de fenêtre « 2 h–6 h » native). Le « batch en heures creuses » est
+assuré par TTL 12 h + supervision + budget, pas par une restriction horaire
+stricte — si un créneau strict devient nécessaire, ce sera un timer systemd
+autour du service (non fait, non nécessaire aujourd'hui).
+
 ## Statut
 
 POC — sert à établir une baseline comparable à une future implémentation
