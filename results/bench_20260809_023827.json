@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-08-09T02:38:27.922905",
+  "results": [
+    {
+      "model": "google/lyria-3-pro-preview",
+      "status": "FAIL",
+      "latency_s": 1.47,
+      "error": "402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"Insufficient credits. This account never purchased credits. Make sure your key is on the correct account or org, and if so, purchase more at https://openrouter.ai/settings/credits"
+    },
+    {
+      "model": "google/lyria-3-clip-preview",
+      "status": "FAIL",
+      "latency_s": 3.15,
+      "error": "402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"Insufficient credits. This account never purchased credits. Make sure your key is on the correct account or org, and if so, purchase more at https://openrouter.ai/settings/credits"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "status": "OK",
+      "latency_s": 6.26,
+      "tokens_out": 137,
+      "response_preview": "Une défaillance ou une indisponibilité du provider unique paralyse simultanément l'ensemble du système, supprimant toute résilience par redondance. Tous les agents héritent des mêmes biais, limitation"
+    },
+    {
+      "model": "inclusionai/ling-3.0-tiny:free",
+      "status": "OK",
+      "latency_s": 2.27,
+      "tokens_out": 317,
+      "response_preview": "1. La concentration de tous les processus critiques sur un même provider crée un point de défaillance unique, rendant l'ensemble du système vulnérable à toute coupure ou dégradation de ce service.\n2. "
+    },
+    {
+      "model": "poolside/laguna-s-2.1:free",
+      "status": "OK",
+      "latency_s": 14.58,
+      "tokens_out": 677,
+      "response_preview": "1. **Single Point of Failure**: Si le fournisseur partagé échoue (panne, erreur, ou attaque), tous les agents dépendent de lui sont affectés simultanément, risquant de bloquer l'ensemble du système.  "
+    },
+    {
+      "model": "poolside/laguna-xs-2.1:free",
+      "status": "OK",
+      "latency_s": 4.98,
+      "tokens_out": 577,
+      "response_preview": "1. **Vulnérabilités partagées** : Une faille de sécurité dans le provider unique pourrait exposer tous les agents à des attaques ou fuites de données, affectant l'ensemble du système.  \n2. **Dépendanc"
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "status": "OK",
+      "latency_s": 6.8,
+      "tokens_out": 180,
+      "response_preview": "Voici les trois risques principaux d'un système multi-agents dépendant d'un fournisseur unique :\n\n1. **Point de défaillance unique (Single Point of Failure) :** Si le fournisseur subit une panne techn"
+    },
+    {
+      "model": "google/gemma-4-31b-it:free",
+      "status": "FAIL",
+      "latency_s": 2.21,
+      "error": "429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate you"
+    }
+  ]
+}

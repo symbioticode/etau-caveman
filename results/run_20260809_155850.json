@@ -1,0 +1,388 @@
+{
+  "pipeline": "ETAU-CAVEMAN-v0.2",
+  "question": "Comment les limites épistémiques des IA contraignent-elles leur contribution à la stratégie ?",
+  "timestamp": "2026-08-09T15:58:50.782553",
+  "variants": {
+    "na": "Comment les limites épistémiques des IA contraignent-elles leur contribution à la stratégie ?",
+    "asia": "Comment les limites épistémiques des IA contraignent-elles leur contribution à la stratégie ?",
+    "eu": "Comment les limites épistémiques des IA contraignent-elles leur contribution à la stratégie ?",
+    "diverse": "Comment les limites épistémiques des IA contraignent-elles leur contribution à la stratégie ?",
+    "deepseek": "Comment les limites épistémiques des IA contraignent-elles leur contribution à la stratégie ?"
+  },
+  "responses": {
+    "na": {
+      "family": "na",
+      "model": "groq/llama-3.3-70b-versatile",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les IA ne peuvent pas prendre en compte les facteurs non quantifiables dans leur analyse stratégique.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Limites dans la compréhension des nuances humaines et des facteurs subjectifs."
+        },
+        {
+          "text": "Les limites de connaissances des IA sont directement liées aux données d'entraînement utilisées.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Biais et lacunes dans les données entraînent des limites épistémiques."
+        },
+        {
+          "text": "Les IA peuvent surpasser les capacités humaines dans l'analyse de grandes quantités de données pour la stratégie.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Capacités de traitement de l'information plus rapides et plus précises que les humains."
+        },
+        {
+          "text": "Les IA peuvent apprendre et s'adapter à de nouvelles situations stratégiques.",
+          "epistemic_state": "B",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Apprentissage automatique versus limites dans la généralisation à des situations complètement nouvelles."
+        },
+        {
+          "text": "Les IA sont capables de comprendre et de reproduire le raisonnement stratégique humain de manière générale.",
+          "epistemic_state": "F",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Limites dans la compréhension des processus de pensée et de décision humains complexes."
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"Les IA ne peuvent pas prendre en compte les facteurs non quantifiables dans leur analyse stratégique.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Limites dans la compréhension des nuances humaines et des facteurs subjectifs.\"\n    },\n    {\n      \"text\": \"Les limites de connaissances des IA sont directement liées aux données d'entraînement utilisées.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Biais et lacunes dans les données entraînent des limites épistémiques.\"\n    },\n    {\n      \"text\": \"Les IA peuvent surpasser les capacités humaines dans l'analyse de grandes quantités de données pour la stratégie.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Capacités de traitement de l'information plus rapides et plus précises que les humains.\"\n    },\n    {\n      \"text\": \"Les IA peuvent apprendre et s'adapter à de nouvelles situations stratégiques.\",\n      \"epistemic_state\": \"B\",\n      \"reasoning\": \"Apprentissage automatique versus limites dans la généralisation à des situations complètement nouvelles.\"\n    },\n    {\n      \"text\": \"Les IA sont capables de comprendre et de reproduire le raisonnement stratégique humain de manière générale.\",\n      \"epistemic_state\": \"F\",\n      \"reasoning\": \"Limites dans la compréhension des processus de pensée et de décision humains complexes.\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 7.58,
+      "tokens_in": 673,
+      "tokens_out": 356
+    },
+    "asia": {
+      "family": "asia",
+      "model": "mistral/mistral-small-latest",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les IA actuelles ne peuvent pas évaluer les conséquences stratégiques à horizon de 20+ ans avec fiabilité, faute de modèles causaux profonds.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les architectures d'IA manquent de mécanismes explicites pour modéliser les boucles de rétroaction systémiques sur le long terme."
+        },
+        {
+          "text": "L'absence de conscience phénoménale limite la capacité des IA à anticiper les réactions émotionnelles ou culturelles dans les décisions stratégiques.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les modèles actuels ne simulent que des patterns statistiques, pas l'expérience subjective ou les valeurs collectives."
+        },
+        {
+          "text": "Les biais de données historiques rendent les IA incapables de proposer des stratégies disruptives hors des cadres conventionnels établis.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les modèles reproduisent les corrélations dominantes dans les données d'entraînement, excluant les innovations radicales."
+        },
+        {
+          "text": "Les limites computationnelles en temps réel empêchent les IA de traiter simultanément plus de 5-7 variables stratégiques critiques.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les problèmes d'optimisation combinatoire deviennent intraitables au-delà d'un certain seuil de complexité."
+        },
+        {
+          "text": "Les IA ne peuvent pas intégrer les dimensions éthiques ou philosophiques des stratégies sans cadre explicite fourni par l'utilisateur.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "L'éthique computationnelle reste dépendante de règles prédéfinies ou de préférences humaines injectées."
+        },
+        {
+          "text": "La dépendance aux données passées rend les IA vulnérables aux discontinuités stratégiques (ex. crises géopolitiques imprévisibles).",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les modèles ne capturent pas les changements structurels dans les systèmes (ex. effondrement d'un paradigme économique)."
+        },
+        {
+          "text": "Les IA peuvent contribuer à la stratégie en optimisant des sous-problèmes bien définis, mais pas en formulant une vision systémique globale.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Leur force réside dans l'analyse locale, pas dans la synthèse holistique requise pour la stratégie."
+        },
+        {
+          "text": "L'opacité des processus décisionnels des IA limite leur acceptabilité dans les contextes stratégiques où la transparence est cruciale.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les boîtes noires rendent impossible l'explicabilité des choix stratégiques, un critère souvent exigé en gouvernance."
+        }
+      ],
+      "raw_text": "```json\n{\n  \"findings\": [\n    {\n      \"text\": \"Les IA actuelles ne peuvent pas évaluer les conséquences stratégiques à horizon de 20+ ans avec fiabilité, faute de modèles causaux profonds.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les architectures d'IA manquent de mécanismes explicites pour modéliser les boucles de rétroaction systémiques sur le long terme.\"\n    },\n    {\n      \"text\": \"L'absence de conscience phénoménale limite la capacité des IA à anticiper les réactions émotionnelles ou culturelles dans les décisions stratégiques.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les modèles actuels ne simulent que des patterns statistiques, pas l'expérience subjective ou les valeurs collectives.\"\n    },\n    {\n      \"text\": \"Les biais de données historiques rendent les IA incapables de proposer des stratégies disruptives hors des cadres conventionnels établis.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les modèles reproduisent les corrélations dominantes dans les données d'entraînement, excluant les innovations radicales.\"\n    },\n    {\n      \"text\": \"Les limites computationnelles en temps réel empêchent les IA de traiter simultanément plus de 5-7 variables stratégiques critiques.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les problèmes d'optimisation combinatoire deviennent intraitables au-delà d'un certain seuil de complexité.\"\n    },\n    {\n      \"text\": \"Les IA ne peuvent pas intégrer les dimensions éthiques ou philosophiques des stratégies sans cadre explicite fourni par l'utilisateur.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"L'éthique computationnelle reste dépendante de règles prédéfinies ou de préférences humaines injectées.\"\n    },\n    {\n      \"text\": \"La dépendance aux données passées rend les IA vulnérables aux discontinuités stratégiques (ex. crises géopolitiques imprévisibles).\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les modèles ne capturent pas les changements structurels dans les systèmes (ex. effondrement d'un paradigme économique).\"\n    },\n    {\n      \"text\": \"Les IA peuvent contribuer à la stratégie en optimisant des sous-problèmes bien définis, mais pas en formulant une vision systémique globale.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Leur force réside dans l'analyse locale, pas dans la synthèse holistique requise pour la stratégie.\"\n    },\n    {\n      \"text\": \"L'opacité des processus décisionnels des IA limite leur acceptabilité dans les contextes stratégiques où la transparence est cruciale.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les boîtes noires rendent impossible l'explicabilité des choix stratégiques, un critère souvent exigé en gouvernance.\"\n    }\n  ]\n}\n```",
+      "error": null,
+      "latency_s": 18.06,
+      "tokens_in": 613,
+      "tokens_out": 642
+    },
+    "eu": {
+      "family": "eu",
+      "model": "cerebras/gemma-4-31b",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les IA sont incapables de saisir le 'sens' (Sinn) social et politique des données, les limitant à une analyse corrélative plutôt qu'une compréhension causale ou intentionnelle de la stratégie.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "L'absence de conscience phénoménologique empêche l'IA d'accéder à l'herméneutique des contextes humains."
+        },
+        {
+          "text": "Le fonctionnement des IA repose sur la reproduction de motifs statistiques passés, ce qui entrave leur capacité à concevoir des ruptures stratégiques ou des innovations disruptives non documentées.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "L'induction statistique est par nature conservatrice et tend vers la moyenne des données d'entraînement."
+        },
+        {
+          "text": "L'IA peut identifier des inefficiences opérationnelles, mais elle ne peut pas définir les finalités axiologiques (valeurs et buts ultimes) d'une organisation.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "La définition des valeurs est un acte politique et subjectif, hors de portée d'un calcul probabiliste."
+        },
+        {
+          "text": "L'opacité des modèles 'boîte noire' crée un risque de délégation aveugle du pouvoir décisionnel, transformant la stratégie en une exécution technique sans responsabilité éthique.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "L'absence d'explicabilité rationnelle contredit l'exigence de justification propre à l'action stratégique consciente."
+        },
+        {
+          "text": "L'intégration de l'IA dans la stratégie élimine systématiquement les biais cognitifs humains pour garantir une neutralité décisionnelle totale.",
+          "epistemic_state": "F",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "Les IA héritent et amplifient souvent les biais présents dans leurs jeux de données d'entraînement."
+        },
+        {
+          "text": "La dépendance des IA envers des données quantifiables marginalise les savoirs tacites et l'expérience intuitive des dirigeants dans la formulation stratégique.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "Ce qui n'est pas traduisible en données numériques devient invisible pour le système d'IA."
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"Les IA sont incapables de saisir le 'sens' (Sinn) social et politique des données, les limitant à une analyse corrélative plutôt qu'une compréhension causale ou intentionnelle de la stratégie.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"L'absence de conscience phénoménologique empêche l'IA d'accéder à l'herméneutique des contextes humains.\"\n    },\n    {\n      \"text\": \"Le fonctionnement des IA repose sur la reproduction de motifs statistiques passés, ce qui entrave leur capacité à concevoir des ruptures stratégiques ou des innovations disruptives non documentées.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"L'induction statistique est par nature conservatrice et tend vers la moyenne des données d'entraînement.\"\n    },\n    {\n      \"text\": \"L'IA peut identifier des inefficiences opérationnelles, mais elle ne peut pas définir les finalités axiologiques (valeurs et buts ultimes) d'une organisation.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"La définition des valeurs est un acte politique et subjectif, hors de portée d'un calcul probabiliste.\"\n    },\n    {\n      \"text\": \"L'opacité des modèles 'boîte noire' crée un risque de délégation aveugle du pouvoir décisionnel, transformant la stratégie en une exécution technique sans responsabilité éthique.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"L'absence d'explicabilité rationnelle contredit l'exigence de justification propre à l'action stratégique consciente.\"\n    },\n    {\n      \"text\": \"L'intégration de l'IA dans la stratégie élimine systématiquement les biais cognitifs humains pour garantir une neutralité décisionnelle totale.\",\n      \"epistemic_state\": \"F\",\n      \"reasoning\": \"Les IA héritent et amplifient souvent les biais présents dans leurs jeux de données d'entraînement.\"\n    },\n    {\n      \"text\": \"La dépendance des IA envers des données quantifiables marginalise les savoirs tacites et l'expérience intuitive des dirigeants dans la formulation stratégique.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Ce qui n'est pas traduisible en données numériques devient invisible pour le système d'IA.\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 3.81,
+      "tokens_in": 617,
+      "tokens_out": 553
+    },
+    "diverse": {
+      "family": "diverse",
+      "model": "groq/openai/gpt-oss-120b",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "IA's outputs are bounded by the scope and biases of their training data, limiting strategic insight to represented scenarios.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Empirical analyses of corpora reveal systematic over‑representation and omission shaping model predictions."
+        },
+        {
+          "text": "Lack of embodied experience prevents AI from grasping affective and relational dimensions crucial for strategic negotiation.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Embodiment studies show that sensorimotor grounding influences empathy and relational reasoning, which AI lacks."
+        },
+        {
+          "text": "Formal uncertainty quantification in current LLMs is unreliable, causing overconfidence that can misguide strategic decisions.",
+          "epistemic_state": "B",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Some papers report calibrated probability estimates, while others document pervasive over‑confidence in low‑data regimes."
+        },
+        {
+          "text": "AI cannot autonomously generate normative values, so strategic recommendations may omit ethical pluralism and marginalised perspectives.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Value‑alignment research emphasizes that AI inherits human‑specified norms rather than originating them."
+        },
+        {
+          "text": "The opaqueness of deep‑network internal representations hampers accountability, constraining AI's use in high‑stakes strategic planning.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Interpretability literature documents limited traceability of decisions in opaque architectures."
+        },
+        {
+          "text": "Hybrid human‑AI co‑design methods aim to bridge epistemic gaps, yet systematic evaluations of strategic impact remain limited.",
+          "epistemic_state": "N",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": ""
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"IA's outputs are bounded by the scope and biases of their training data, limiting strategic insight to represented scenarios.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Empirical analyses of corpora reveal systematic over‑representation and omission shaping model predictions.\"\n    },\n    {\n      \"text\": \"Lack of embodied experience prevents AI from grasping affective and relational dimensions crucial for strategic negotiation.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Embodiment studies show that sensorimotor grounding influences empathy and relational reasoning, which AI lacks.\"\n    },\n    {\n      \"text\": \"Formal uncertainty quantification in current LLMs is unreliable, causing overconfidence that can misguide strategic decisions.\",\n      \"epistemic_state\": \"B\",\n      \"reasoning\": \"Some papers report calibrated probability estimates, while others document pervasive over‑confidence in low‑data regimes.\"\n    },\n    {\n      \"text\": \"AI cannot autonomously generate normative values, so strategic recommendations may omit ethical pluralism and marginalised perspectives.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Value‑alignment research emphasizes that AI inherits human‑specified norms rather than originating them.\"\n    },\n    {\n      \"text\": \"The opaqueness of deep‑network internal representations hampers accountability, constraining AI's use in high‑stakes strategic planning.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Interpretability literature documents limited traceability of decisions in opaque architectures.\"\n    },\n    {\n      \"text\": \"Hybrid human‑AI co‑design methods aim to bridge epistemic gaps, yet systematic evaluations of strategic impact remain limited.\",\n      \"epistemic_state\": \"N\",\n      \"reasoning\": \"\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 8.91,
+      "tokens_in": 638,
+      "tokens_out": 1241
+    },
+    "deepseek": {
+      "family": "deepseek",
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "findings": [
+        {
+          "text": "Les IA ne disposent pas d'une expérience incarnée ou située, ce qui limite leur capacité à appréhender les dimensions tacites et contextuelles des environnements stratégiques.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "deepseek",
+          "reasoning": "La littérature sur la cognition incarnée et les critiques féministes des savoirs situés soutient que la connaissance stratégique dépend de contextes matériels et corporels que les IA n'ont pas."
+        },
+        {
+          "text": "Les biais présents dans les données d'entraînement des IA, hérités de rapports de pouvoir historiques, contraignent leur contribution à des stratégies véritablement décoloniales ou transformatrices.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "deepseek",
+          "reasoning": "De nombreuses études empiriques montrent que les modèles de langage reproduisent des stéréotypes et des biais systémiques, ce qui limite leur capacité à proposer des alternatives épistémiques radicales."
+        },
+        {
+          "text": "En situation de rupture ou d'incertitude radicale, les IA généralisent mal au-delà de leur distribution d'entraînement, ce qui les rend peu fiables pour anticiper des scénarios stratégiques inédits.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "deepseek",
+          "reasoning": "Les recherches en apprentissage automatique soulignent la fragilité des modèles face aux exemples hors distribution, ce qui est documenté dans de nombreux domaines d'application."
+        },
+        {
+          "text": "L'opacité des modèles d'IA (boîtes noires) réduit leur contribution à la stratégie en entravant la redevabilité et la justification publique des choix stratégiques.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "deepseek",
+          "reasoning": "Les travaux sur l'IA explicable montrent que l'absence de transparence limite la confiance et la légitimité dans les processus de décision stratégique, notamment dans les organisations."
+        },
+        {
+          "text": "Les IA sont formées sur des corpus dominés par des perspectives occidentales et masculines, ce qui crée des angles morts épistémiques, mais elles peuvent aussi révéler des patterns statistiques invisibles à l'œil humain dans des données massives.",
+          "epistemic_state": "B",
+          "confidence": null,
+          "source_family": "deepseek",
+          "reasoning": "D'un côté, la critique postcoloniale et féministe montre la reproduction de savoirs hégémoniques ; de l'autre, des exemples de découvertes par IA dans les données complexes suggèrent un potentiel de décentrement."
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"Les IA ne disposent pas d'une expérience incarnée ou située, ce qui limite leur capacité à appréhender les dimensions tacites et contextuelles des environnements stratégiques.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"La littérature sur la cognition incarnée et les critiques féministes des savoirs situés soutient que la connaissance stratégique dépend de contextes matériels et corporels que les IA n'ont pas.\"\n    },\n    {\n      \"text\": \"Les biais présents dans les données d'entraînement des IA, hérités de rapports de pouvoir historiques, contraignent leur contribution à des stratégies véritablement décoloniales ou transformatrices.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"De nombreuses études empiriques montrent que les modèles de langage reproduisent des stéréotypes et des biais systémiques, ce qui limite leur capacité à proposer des alternatives épistémiques radicales.\"\n    },\n    {\n      \"text\": \"En situation de rupture ou d'incertitude radicale, les IA généralisent mal au-delà de leur distribution d'entraînement, ce qui les rend peu fiables pour anticiper des scénarios stratégiques inédits.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les recherches en apprentissage automatique soulignent la fragilité des modèles face aux exemples hors distribution, ce qui est documenté dans de nombreux domaines d'application.\"\n    },\n    {\n      \"text\": \"L'opacité des modèles d'IA (boîtes noires) réduit leur contribution à la stratégie en entravant la redevabilité et la justification publique des choix stratégiques.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les travaux sur l'IA explicable montrent que l'absence de transparence limite la confiance et la légitimité dans les processus de décision stratégique, notamment dans les organisations.\"\n    },\n    {\n      \"text\": \"Les IA sont formées sur des corpus dominés par des perspectives occidentales et masculines, ce qui crée des angles morts épistémiques, mais elles peuvent aussi révéler des patterns statistiques invisibles à l'œil humain dans des données massives.\",\n      \"epistemic_state\": \"B\",\n      \"reasoning\": \"D'un côté, la critique postcoloniale et féministe montre la reproduction de savoirs hégémoniques ; de l'autre, des exemples de découvertes par IA dans les données complexes suggèrent un potentiel de décentrement.\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 14.62,
+      "tokens_in": 625,
+      "tokens_out": 941
+    }
+  },
+  "synthesis": {
+    "common_ground": [
+      "Les IA sont limitées par les données d'entraînement utilisées",
+      "Les IA ne peuvent pas prendre en compte les facteurs non quantifiables",
+      "Les IA sont incapables de comprendre les dimensions éthiques ou philosophiques des stratégies"
+    ],
+    "disagreements": [
+      "Les IA peuvent surpasser les capacités humaines dans l'analyse de données pour la stratégie",
+      "Les IA peuvent intégrer les dimensions éthiques ou philosophiques des stratégies sans cadre explicite"
+    ],
+    "blind_spots": [
+      "Les biais de données historiques et leur impact sur les décisions stratégiques",
+      "L'incapacité des IA à concevoir des ruptures stratégiques ou des innovations disruptives"
+    ],
+    "open_zones": [
+      "La question de savoir comment les IA peuvent être utilisées pour formuler une vision systémique globale",
+      "La mesure dans laquelle les IA peuvent réellement surpasser les capacités humaines dans l'analyse stratégique"
+    ],
+    "hypotheses": [
+      "Les IA pourraient être utilisées pour identifier des inefficiences opérationnelles dans les organisations",
+      "Les IA pourraient être utilisées pour optimiser des sous-problèmes bien définis dans la stratégie"
+    ],
+    "graded_findings": [
+      {
+        "text": "Les IA sont limitées par les données d'entraînement utilisées",
+        "confidence": "FORT",
+        "source_families": [
+          "na",
+          "asia",
+          "eu",
+          "diverse",
+          "deepseek"
+        ]
+      },
+      {
+        "text": "Les IA ne peuvent pas prendre en compte les facteurs non quantifiables",
+        "confidence": "FORT",
+        "source_families": [
+          "na",
+          "asia",
+          "eu"
+        ]
+      },
+      {
+        "text": "Les IA sont incapables de comprendre les dimensions éthiques ou philosophiques des stratégies",
+        "confidence": "FORT",
+        "source_families": [
+          "asia",
+          "eu",
+          "diverse"
+        ]
+      },
+      {
+        "text": "Les IA peuvent surpasser les capacités humaines dans l'analyse de grandes quantités de données",
+        "confidence": "PROBABLE",
+        "source_families": [
+          "na"
+        ]
+      },
+      {
+        "text": "Les IA peuvent apprendre et s'adapter à de nouvelles situations stratégiques",
+        "confidence": "FAIBLE",
+        "source_families": [
+          "na"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "total_latency_s": 25.03,
+    "latency_by_family": {
+      "na": 7.58,
+      "asia": 18.06,
+      "eu": 3.81,
+      "diverse": 8.91,
+      "deepseek": 14.62
+    },
+    "failed_families": [],
+    "synthesis_error": null,
+    "tokens_in": 3166,
+    "tokens_out": 3733,
+    "estimated_cost_usd": 0,
+    "provider_map": {
+      "na": "omniroute",
+      "asia": "omniroute",
+      "eu": "omniroute",
+      "diverse": "omniroute",
+      "deepseek": "deepseek"
+    },
+    "health_check": {
+      "groq": {
+        "ok": true,
+        "latency_s": 0.62
+      },
+      "mistral": {
+        "ok": true,
+        "latency_s": 0.76
+      },
+      "cerebras": {
+        "ok": true,
+        "latency_s": 3.41
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-08-09T05:15:20.244722",
+  "results": [
+    {
+      "model": "google/lyria-3-pro-preview",
+      "status": "FAIL",
+      "latency_s": 1.81,
+      "error": "402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"Insufficient credits. This account never purchased credits. Make sure your key is on the correct account or org, and if so, purchase more at https://openrouter.ai/settings/credits"
+    },
+    {
+      "model": "google/lyria-3-clip-preview",
+      "status": "FAIL",
+      "latency_s": 3.11,
+      "error": "402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"Insufficient credits. This account never purchased credits. Make sure your key is on the correct account or org, and if so, purchase more at https://openrouter.ai/settings/credits"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "status": "OK",
+      "latency_s": 8.18,
+      "tokens_out": 152,
+      "response_preview": "Une panne ou une dégradation de performance chez le provider unique paralyse simultanément tous les agents, créant un point de défaillance unique (SPOF) critique. La diversité cognitive s'effondre car"
+    },
+    {
+      "model": "inclusionai/ling-3.0-tiny:free",
+      "status": "OK",
+      "latency_s": 4.75,
+      "tokens_out": 963,
+      "response_preview": "Le premier risque est l'existence d'un point de défaillance unique, la chute du fournisseur empêchant tout le système de fonctionner. De plus, la concurrence pour les ressources limitées provoque des "
+    },
+    {
+      "model": "poolside/laguna-s-2.1:free",
+      "status": "OK",
+      "latency_s": 12.42,
+      "tokens_out": 444,
+      "response_preview": "1. **Single Point of Failure** : Si le provider partagé rencontre un problème (panne, attaque, ou erreur), tous les agents dépendent de lui sont affectés simultanément, interrompant le système entier."
+    },
+    {
+      "model": "poolside/laguna-xs-2.1:free",
+      "status": "OK",
+      "latency_s": 6.78,
+      "tokens_out": 519,
+      "response_preview": "1. **Point de défaillance unique** : Si le provider commun échoue ou subit une interruption de service, tous les agents du système sont immédiatement affectés, entraînant une perte de fonctionnalité o"
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "status": "OK",
+      "latency_s": 19.99,
+      "tokens_out": 143,
+      "response_preview": "L'utilisation d'un fournisseur unique crée un **point de défaillance unique** (*single point of failure*), car une panne du service ou une interruption technique paralyse instantanément l'ensemble du "
+    },
+    {
+      "model": "google/gemma-4-31b-it:free",
+      "status": "FAIL",
+      "latency_s": 1.72,
+      "error": "429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate you"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-08-09T15:46:33.940780",
+  "results": [
+    {
+      "model": "groq/llama-3.3-70b-versatile",
+      "status": "FAIL",
+      "latency_s": 1.54,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "model": "groq/openai/gpt-oss-120b",
+      "status": "FAIL",
+      "latency_s": 3.16,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "model": "mistral/mistral-small-latest",
+      "status": "FAIL",
+      "latency_s": 4.2,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "model": "mistral/ministral-8b-latest",
+      "status": "FAIL",
+      "latency_s": 3.77,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "model": "cerebras/gemma-4-31b",
+      "status": "FAIL",
+      "latency_s": 2.22,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "model": "cerebras/gpt-oss-120b",
+      "status": "FAIL",
+      "latency_s": 3.22,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "model": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "status": "FAIL",
+      "latency_s": 41.03,
+      "error": "429 Client Error: Too Many Requests for url: http://localhost:20128/v1/chat/completions — {\"error\":{\"message\":\"[openrouter/google/gemma-4-26b-a4b-it:free] [429]: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day (reset after 3s)\"}}"
+    }
+  ]
+}

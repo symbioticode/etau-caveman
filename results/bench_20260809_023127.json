@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-09T02:31:27.158219",
+  "prompt": "En 3 phrases : quels sont les risques d'un système multi-agents où tous les agents partagent le même provider ?",
+  "results": [
+    {
+      "model": "meta-llama/llama-3.3-70b-instruct:free",
+      "status": "FAIL",
+      "latency_s": 1.32,
+      "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct:free",
+      "status": "FAIL",
+      "latency_s": 3.15,
+      "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+    },
+    {
+      "model": "mistralai/mistral-small-3.1-24b-instruct:free",
+      "status": "FAIL",
+      "latency_s": 3.13,
+      "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+    },
+    {
+      "model": "google/gemma-3-27b-it:free",
+      "status": "FAIL",
+      "latency_s": 3.34,
+      "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+    },
+    {
+      "model": "deepseek/deepseek-chat:free",
+      "status": "FAIL",
+      "latency_s": 3.11,
+      "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+    }
+  ]
+}

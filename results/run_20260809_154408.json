@@ -1,0 +1,251 @@
+{
+  "pipeline": "ETAU-CAVEMAN-v0.2",
+  "question": "Quelles sont les 3 limites principales des LLM pour la recherche ?",
+  "timestamp": "2026-08-09T15:44:08.627818",
+  "variants": {
+    "na": "Quelles sont les 3 limites principales des LLM pour la recherche ?",
+    "asia": "Quelles sont les 3 limites principales des LLM pour la recherche ?",
+    "eu": "Quelles sont les 3 limites principales des LLM pour la recherche ?",
+    "diverse": "Quelles sont les 3 limites principales des LLM pour la recherche ?"
+  },
+  "responses": {
+    "na": {
+      "family": "na",
+      "model": "groq/llama-3.3-70b-versatile",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les LLM nécessitent des quantités massives de données pour être efficaces",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Les LLM sont basés sur l'apprentissage automatique et nécessitent donc des grandes quantités de données"
+        },
+        {
+          "text": "Les LLM peuvent reproduire les biais et les erreurs présents dans les données d'entraînement",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Les LLM apprennent à partir des données et peuvent ainsi reproduire les biais et les erreurs que celles-ci contiennent"
+        },
+        {
+          "text": "Les LLM peuvent avoir des difficultés à comprendre le contexte et la nuance de certaines questions de recherche",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Les LLM sont basés sur des modèles statistiques et peuvent avoir des difficultés à comprendre les nuances et le contexte de certaines questions"
+        },
+        {
+          "text": "Les LLM ne peuvent pas remplacer complètement les chercheurs humains dans la recherche",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "na",
+          "reasoning": "Les LLM sont des outils utiles pour la recherche, mais ils ne peuvent pas remplacer la pensée critique et la créativité des chercheurs humains"
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"Les LLM nécessitent des quantités massives de données pour être efficaces\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les LLM sont basés sur l'apprentissage automatique et nécessitent donc des grandes quantités de données\"\n    },\n    {\n      \"text\": \"Les LLM peuvent reproduire les biais et les erreurs présents dans les données d'entraînement\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les LLM apprennent à partir des données et peuvent ainsi reproduire les biais et les erreurs que celles-ci contiennent\"\n    },\n    {\n      \"text\": \"Les LLM peuvent avoir des difficultés à comprendre le contexte et la nuance de certaines questions de recherche\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les LLM sont basés sur des modèles statistiques et peuvent avoir des difficultés à comprendre les nuances et le contexte de certaines questions\"\n    },\n    {\n      \"text\": \"Les LLM ne peuvent pas remplacer complètement les chercheurs humains dans la recherche\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les LLM sont des outils utiles pour la recherche, mais ils ne peuvent pas remplacer la pensée critique et la créativité des chercheurs humains\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 6.34,
+      "tokens_in": 659,
+      "tokens_out": 323
+    },
+    "asia": {
+      "family": "asia",
+      "model": "mistral/mistral-small-latest",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les LLM génèrent des hallucinations factuelles avec une confiance apparente, compromettant la fiabilité des sources citées en recherche.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Études empiriques (ex. Maynez et al., 2023) montrent des erreurs factuelles non détectables sans vérification externe."
+        },
+        {
+          "text": "Leur incapacité à distinguer les biais culturels ou disciplinaires limite leur neutralité, surtout pour des recherches interculturelles ou transdisciplinaires.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Les biais d'entraînement (ex. surreprésentation de l'anglais occidental) sont documentés (ex. Bender et al., 2021), mais leur impact systémique reste sous-estimé."
+        },
+        {
+          "text": "Les LLM ne peuvent pas contextualiser dynamiquement les connaissances : leur compréhension est statique et ne s'adapte pas aux évolutions épistémiques en temps réel.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "asia",
+          "reasoning": "Leur architecture (tokenisation fixe, absence de mémoire épisodique) les rend incapables de suivre les débats scientifiques émergents (ex. prépublications arXiv)."
+        }
+      ],
+      "raw_text": "```json\n{\n  \"findings\": [\n    {\n      \"text\": \"Les LLM génèrent des hallucinations factuelles avec une confiance apparente, compromettant la fiabilité des sources citées en recherche.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Études empiriques (ex. Maynez et al., 2023) montrent des erreurs factuelles non détectables sans vérification externe.\"\n    },\n    {\n      \"text\": \"Leur incapacité à distinguer les biais culturels ou disciplinaires limite leur neutralité, surtout pour des recherches interculturelles ou transdisciplinaires.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Les biais d'entraînement (ex. surreprésentation de l'anglais occidental) sont documentés (ex. Bender et al., 2021), mais leur impact systémique reste sous-estimé.\"\n    },\n    {\n      \"text\": \"Les LLM ne peuvent pas contextualiser dynamiquement les connaissances : leur compréhension est statique et ne s'adapte pas aux évolutions épistémiques en temps réel.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Leur architecture (tokenisation fixe, absence de mémoire épisodique) les rend incapables de suivre les débats scientifiques émergents (ex. prépublications arXiv).\"\n    }\n  ]\n}\n```",
+      "error": null,
+      "latency_s": 4.58,
+      "tokens_in": 605,
+      "tokens_out": 301
+    },
+    "eu": {
+      "family": "eu",
+      "model": "cerebras/gemma-4-31b",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les LLM produisent des hallucinations, soit des affirmations factuellement fausses présentées avec assurance, compromettant la fiabilité des sources citées.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "Phénomène largement documenté et intrinsèque à la nature probabiliste de la prédiction du prochain jeton."
+        },
+        {
+          "text": "L'architecture des LLM reproduit et amplifie les biais idéologiques et hégémoniques contenus dans leurs données d'entraînement majoritairement anglo-centrées.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "La distribution statistique des données reflète les rapports de pouvoir et les préjugés culturels des corpus sources."
+        },
+        {
+          "text": "Les LLM sont incapables de réflexion critique autonome car ils simulent une cohérence syntaxique sans accès à une compréhension sémantique ou ontologique du monde.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "L'absence de modèle du monde indépendant du langage empêche l'exercice d'un doute méthodologique véritable."
+        },
+        {
+          "text": "L'opacité des algorithmes et des jeux de données d'entraînement empêche la reproductibilité stricte des résultats, condition sine qua non de la méthode scientifique.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "Le secret commercial des entreprises propriétaires rend l'audit technique et la traçabilité des sources impossibles."
+        },
+        {
+          "text": "L'utilisation des LLM en recherche pourrait conduire à une atrophie des capacités d'analyse synthétique et herméneutique chez le chercheur humain.",
+          "epistemic_state": "B",
+          "confidence": null,
+          "source_family": "eu",
+          "reasoning": "Conflit entre l'augmentation des capacités de traitement et le risque de délégation cognitive."
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"Les LLM produisent des hallucinations, soit des affirmations factuellement fausses présentées avec assurance, compromettant la fiabilité des sources citées.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Phénomène largement documenté et intrinsèque à la nature probabiliste de la prédiction du prochain jeton.\"\n    },\n    {\n      \"text\": \"L'architecture des LLM reproduit et amplifie les biais idéologiques et hégémoniques contenus dans leurs données d'entraînement majoritairement anglo-centrées.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"La distribution statistique des données reflète les rapports de pouvoir et les préjugés culturels des corpus sources.\"\n    },\n    {\n      \"text\": \"Les LLM sont incapables de réflexion critique autonome car ils simulent une cohérence syntaxique sans accès à une compréhension sémantique ou ontologique du monde.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"L'absence de modèle du monde indépendant du langage empêche l'exercice d'un doute méthodologique véritable.\"\n    },\n    {\n      \"text\": \"L'opacité des algorithmes et des jeux de données d'entraînement empêche la reproductibilité stricte des résultats, condition sine qua non de la méthode scientifique.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Le secret commercial des entreprises propriétaires rend l'audit technique et la traçabilité des sources impossibles.\"\n    },\n    {\n      \"text\": \"L'utilisation des LLM en recherche pourrait conduire à une atrophie des capacités d'analyse synthétique et herméneutique chez le chercheur humain.\",\n      \"epistemic_state\": \"B\",\n      \"reasoning\": \"Conflit entre l'augmentation des capacités de traitement et le risque de délégation cognitive.\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 5.69,
+      "tokens_in": 609,
+      "tokens_out": 440
+    },
+    "diverse": {
+      "family": "diverse",
+      "model": "groq/openai/gpt-oss-120b",
+      "provider": "omniroute",
+      "findings": [
+        {
+          "text": "Les grands modèles de langage produisent fréquemment des affirmations plausibles mais factuellement incorrectes, appelées hallucinations, sans fournir de sources vérifiables.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Des études empiriques montrent que les LLM génèrent des erreurs factuelles même lorsqu’ils semblent confiants."
+        },
+        {
+          "text": "Les LLM reproduisent et amplifient les biais socio‑culturels présents dans leurs données d’entraînement, ce qui marginalise les voix déjà sous‑représentées dans la recherche académique.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "Analyses critiques de corpus et d’audits de biais confirment la persistance de stéréotypes et d’inégalités dans les sorties."
+        },
+        {
+          "text": "Le fonctionnement interne des LLM reste opaque, limitant la traçabilité du raisonnement et la reproductibilité des résultats, conditions essentielles de la recherche scientifique.",
+          "epistemic_state": "T",
+          "confidence": null,
+          "source_family": "diverse",
+          "reasoning": "La nature statistique et l’architecture de type « black‑box » empêche d’extraire des justifications logiques explicites."
+        }
+      ],
+      "raw_text": "{\n  \"findings\": [\n    {\n      \"text\": \"Les grands modèles de langage produisent fréquemment des affirmations plausibles mais factuellement incorrectes, appelées hallucinations, sans fournir de sources vérifiables.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Des études empiriques montrent que les LLM génèrent des erreurs factuelles même lorsqu’ils semblent confiants.\"\n    },\n    {\n      \"text\": \"Les LLM reproduisent et amplifient les biais socio‑culturels présents dans leurs données d’entraînement, ce qui marginalise les voix déjà sous‑représentées dans la recherche académique.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"Analyses critiques de corpus et d’audits de biais confirment la persistance de stéréotypes et d’inégalités dans les sorties.\"\n    },\n    {\n      \"text\": \"Le fonctionnement interne des LLM reste opaque, limitant la traçabilité du raisonnement et la reproductibilité des résultats, conditions essentielles de la recherche scientifique.\",\n      \"epistemic_state\": \"T\",\n      \"reasoning\": \"La nature statistique et l’architecture de type « black‑box » empêche d’extraire des justifications logiques explicites.\"\n    }\n  ]\n}",
+      "error": null,
+      "latency_s": 3.47,
+      "tokens_in": 632,
+      "tokens_out": 504
+    }
+  },
+  "synthesis": {
+    "common_ground": [
+      "Les LLM peuvent reproduire les biais et les erreurs présents dans les données d'entraînement",
+      "Les LLM peuvent produire des hallucinations factuelles",
+      "Les LLM ont des limites en termes de compréhension contextuelle et nuancée"
+    ],
+    "disagreements": [
+      "L'impact des LLM sur la recherche scientifique est mitigé",
+      "La capacité des LLM à remplacer les chercheurs humains est discutée"
+    ],
+    "blind_spots": [
+      "L'influence des LLM sur les débats scientifiques émergents",
+      "L'impact des LLM sur la traçabilité et la reproductibilité des résultats"
+    ],
+    "open_zones": [
+      "Les LLM peuvent-ils être utilisés de manière efficace pour la recherche scientifique ?",
+      "Quelles sont les limites éthiques de l'utilisation des LLM en recherche ?"
+    ],
+    "hypotheses": [
+      "Les LLM pourraient être améliorés en intégrant des mécanismes de vérification factuelle",
+      "Les LLM pourraient être utilisés pour augmenter les capacités d'analyse synthétique et herméneutique des chercheurs humains"
+    ],
+    "graded_findings": [
+      {
+        "text": "Les LLM nécessitent des quantités massives de données pour être efficaces",
+        "confidence": "FAIBLE",
+        "source_families": [
+          "na"
+        ]
+      },
+      {
+        "text": "Les LLM peuvent produire des hallucinations factuelles avec une confiance apparente",
+        "confidence": "FORT",
+        "source_families": [
+          "asia",
+          "eu",
+          "diverse"
+        ]
+      },
+      {
+        "text": "Les LLM reproduisent et amplifient les biais socio-culturels présents dans leurs données d'entraînement",
+        "confidence": "PROBABLE",
+        "source_families": [
+          "asia",
+          "eu",
+          "diverse"
+        ]
+      },
+      {
+        "text": "Les LLM ont des difficultés à comprendre le contexte et la nuance de certaines questions de recherche",
+        "confidence": "PROBABLE",
+        "source_families": [
+          "na",
+          "asia"
+        ]
+      },
+      {
+        "text": "Les LLM ne peuvent pas remplacer complètement les chercheurs humains dans la recherche",
+        "confidence": "FAIBLE",
+        "source_families": [
+          "na"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "total_latency_s": 10.5,
+    "latency_by_family": {
+      "na": 6.34,
+      "asia": 4.58,
+      "eu": 5.69,
+      "diverse": 3.47
+    },
+    "failed_families": [],
+    "synthesis_error": null,
+    "tokens_in": 2505,
+    "tokens_out": 1568,
+    "estimated_cost_usd": 0,
+    "provider_map": {
+      "na": "omniroute",
+      "asia": "omniroute",
+      "eu": "omniroute",
+      "diverse": "omniroute"
+    }
+  }
+}

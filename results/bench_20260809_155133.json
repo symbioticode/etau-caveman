@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-08-09T15:51:33.948047",
+  "results": [
+    {
+      "model": "groq/llama-3.3-70b-versatile",
+      "status": "OK",
+      "latency_s": 2.02,
+      "tokens_out": 137,
+      "response_preview": "Un système multi-agents où tous les agents partagent le même fournisseur (ou provider) peut présenter des risques tels que la centralisation des données, ce qui augmente la vulnérabilité aux attaques "
+    },
+    {
+      "model": "groq/openai/gpt-oss-120b",
+      "status": "OK",
+      "latency_s": 3.17,
+      "tokens_out": 188,
+      "response_preview": "Un seul provider devient un point de défaillance unique : si le service tombe ou subit une panne, tous les agents sont paralysés simultanément.  \nLe partage de la même infrastructure crée un goulot d’"
+    },
+    {
+      "model": "mistral/mistral-small-latest",
+      "status": "OK",
+      "latency_s": 4.51,
+      "tokens_out": 121,
+      "response_preview": "Un système multi-agents avec un **unique provider** centralisé crée un **point de défaillance unique** (SPOF), rendant l'ensemble vulnérable aux pannes ou attaques ciblant ce provider.\n\nIl expose auss"
+    },
+    {
+      "model": "mistral/ministral-8b-latest",
+      "status": "OK",
+      "latency_s": 6.17,
+      "tokens_out": 250,
+      "response_preview": "1. **Centralisation des vulnérabilités** : Un provider unique crée un *point unique de défaillance* (SPOF), où une panne, une faille de sécurité (ex. faille logicielle) ou une attaque ciblée (DDoS, in"
+    },
+    {
+      "model": "cerebras/gemma-4-31b",
+      "status": "OK",
+      "latency_s": 2.58,
+      "tokens_out": 115,
+      "response_preview": "L'utilisation d'un provider unique crée un **point de défaillance unique**, où une panne du service ou une interruption de l'API paralyse l'ensemble du système. On s'expose également à des **risques d"
+    },
+    {
+      "model": "cerebras/gpt-oss-120b",
+      "status": "OK",
+      "latency_s": 3.54,
+      "tokens_out": 234,
+      "response_preview": "1. Un fournisseur unique crée un point de défaillance critique : si le service du provider tombe, tous les agents sont simultanément paralysés, ce qui menace la continuité du système.  \n2. La concentr"
+    },
+    {
+      "model": "openrouter/google/gemma-4-26b-a4b-it:free",
+      "status": "FAIL",
+      "latency_s": 131.06,
+      "error": "Error code: 429 - {'error': {'message': '[openrouter/google/gemma-4-26b-a4b-it:free] [429]: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day (reset a"
+    }
+  ]
+}

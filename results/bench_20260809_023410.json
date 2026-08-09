@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-09T02:34:10.549940",
+  "prompt": "En 3 phrases : quels sont les risques d'un système multi-agents où tous les agents partagent le même provider ?",
+  "results": [
+    {
+      "model": "meta-llama/llama-3.3-70b-instruct:free",
+      "status": "FAIL",
+      "latency_s": 2.29,
+      "error": "404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\",\"code\":404},\"user_id\":\"user_3HfMLKay9BdVIVR6H63g26jIFAl\"}"
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct:free",
+      "status": "FAIL",
+      "latency_s": 3.14,
+      "error": "404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen-2.5-72b-instruct\",\"code\":404},\"user_id\":\"user_3HfMLKay9BdVIVR6H63g26jIFAl\"}"
+    },
+    {
+      "model": "mistralai/mistral-small-3.1-24b-instruct:free",
+      "status": "FAIL",
+      "latency_s": 3.18,
+      "error": "404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: mistralai/mistral-small-3.1-24b-instruct\",\"code\":404},\"user_id\":\"user_3HfMLKay9BdVIVR6H63g26jIFAl\"}"
+    },
+    {
+      "model": "google/gemma-3-27b-it:free",
+      "status": "FAIL",
+      "latency_s": 3.14,
+      "error": "404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: google/gemma-3-27b-it\",\"code\":404},\"user_id\":\"user_3HfMLKay9BdVIVR6H63g26jIFAl\"}"
+    },
+    {
+      "model": "deepseek/deepseek-chat:free",
+      "status": "FAIL",
+      "latency_s": 3.18,
+      "error": "404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions — {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: deepseek/deepseek-chat\",\"code\":404},\"user_id\":\"user_3HfMLKay9BdVIVR6H63g26jIFAl\"}"
+    }
+  ]
+}
