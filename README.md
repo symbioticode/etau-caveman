@@ -65,7 +65,7 @@ nix-shell
 python scripts/model_bench.py            # bench multi-providers via Omniroute
 python src/orchestrator.py "Ta question ici"
 /home/andrei/Projects/64_ETAU_CAVEMAN/.venv/bin/python \
-  ../65_OMNIROUTE/scripts/recherche_hypotheses_stub.py "Ta question ici"
+  ../65_OMNIROUTE/scripts/recherche_hypotheses.py "Ta question ici"
 ```
 
 ### Interface web locale

@@ -13,7 +13,7 @@
 **Verdict corrigé : CAVEMAN exécute le pipeline; la validation épistémique
 appartient à AGORA/substrat-bench et ne bloque pas son exécution.**
 
-- `65_OMNIROUTE/scripts/recherche_hypotheses_stub.py` (nom historique conservé)
+- `65_OMNIROUTE/scripts/recherche_hypotheses.py`
   reformule la question, appelle trois modèles configurés via Omniroute, puis
   délègue la synthèse à l'orchestrateur ETAU/CAVEMAN.
 - Test réel du 2026-08-09 : Mistral a reformulé; Groq, Mistral et Cerebras ont
