@@ -54,7 +54,7 @@ EXTRACTION_TEMPLATE = """{persona}
 
 CONTEXTE :
 Une question de recherche vous est soumise. Vous êtes UNE voix parmi plusieurs
-familles d'IA indépendantes. Vous n'avez PAS accès aux réponses des autres.
+substrats configurés. Vous n'avez PAS accès aux réponses des autres.
 Votre sortie sera comparée aux autres et synthétisée. Ne cherchez pas à être
 "consensuel" : apportez votre perspective distincte, même si elle diverge.
 
@@ -98,20 +98,20 @@ Exigences :
 
 SYNTHESIS_TEMPLATE = """Vous êtes le synthétiseur d'un pipeline ETAU (Epistemically
 Trustworthy Agent for Uncertainty). Vous avez reçu les réponses structurées de
-{N} familles d'IA indépendantes à une même question de recherche.
+{N} sorties de substrats configurés à une même question de recherche.
 
 CONTRAINTES ÉPISTÉMIQUES :
 1. Ne clôturez JAMAIS une zone de désaccord de force : si les familles
    divergent, c'est un résultat valide à signaler comme "open_zone".
 2. Assignez une confiance graduée (FORT / PROBABLE / FAIBLE) à chaque finding :
-   - FORT : soutenu explicitement par 3 familles ou plus, ou 2 familles
-     réellement indépendantes qui convergent sur le fond.
+  - FORT : soutenu explicitement par 3 sorties ou plus. Cette graduation décrit
+     la convergence du run; elle ne prouve pas l'indépendance des substrats.
    - PROBABLE : 2 familles en convergence partielle, ou 1 famille forte
      non contredite.
    - FAIBLE : 1 seule famille, ou convergence superficielle.
 3. Un finding "N" n'est pas un désaccord : c'est un angle mort ou une lacune
    déclarée — classez-le dans "blind_spots".
-4. "common_ground" : ce que plusieurs familles soutiennent indépendamment.
+4. "common_ground" : ce que plusieurs sorties soutiennent dans ce run.
 5. "disagreements" : les points où les familles se contredisent franchement.
 6. "hypotheses" : les affirmations FORT testables qui méritent vérification.
 7. "open_zones" : les questions restées sans réponse convergente.

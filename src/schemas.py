@@ -32,14 +32,12 @@ class ConfidenceLevel(str, Enum):
 # VÉRIFIÉ santé 2026-08-09 (analyse call_logs SQLite 24h, voir
 # 65_OMNIROUTE/docs/omniroute-guide.md §11 — requête de diagnostic santé).
 #
-# ÉTAT RÉEL — 3 substrats vraiment indépendants aujourd'hui :
+# ÉTAT OPÉRATIONNEL — 3 modèles configurés et sains lors du relevé :
 #   - groq/llama-3.3-70b-versatile   : 22/22 OK   → sain
 #   - mistral/mistral-small-latest   : 17/17 OK   → sain
 #   - cerebras/gemma-4-31b           :  8/8  OK   → sain
-# Le 4e rôle (diverse) partage le provider groq (openai/gpt-oss-120b :
-# 10/12 OK, substrat de fondation OpenAI distinct) — ce n'est donc PAS
-# 4 familles pleinement indépendantes. À corriger si une 4e clé
-# (openai/anthropic) devient disponible.
+# Leur indépendance n'est ni affirmée ni mesurée ici : cette calibration
+# appartient à AGORA/substrat-bench, hors pipeline CAVEMAN.
 #
 # EXCLUSIONS EXPLICITES (définitives pour les runs) :
 #   - openrouter/*:free  → non fiable (quota free-models-per-day épuisé :

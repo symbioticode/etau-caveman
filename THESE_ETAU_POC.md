@@ -12,8 +12,8 @@ et donc invisibles depuis l'intérieur. La fiabilité ne peut émerger que de la
 
 ## Le principe opératoire
 
-Une question (de recherche, de stratégie) est reformulée en plusieurs
-variantes, soumise **en parallèle** à plusieurs IA de **familles distinctes**,
+Une question (de recherche, de stratégie) est reformulée en prompt de recherche
+approfondie, soumise **en parallèle** à plusieurs substrats configurés,
 puis synthétisée en un cadre : ce sur quoi elles s'accordent, ce qui les
 oppose, et ce que le consensus laisse collectivement invisible.
 
@@ -21,7 +21,11 @@ La synthèse n'est **pas** une conclusion à valider telle quelle : c'est un
 cadre de travail pour la décision humaine. Les désaccords et les angles morts
 sont des **résultats valides**, pas des défauts à masquer.
 
-## Les invariants qui découlent de la thèse
+## Invariants de la cible ETAU rigoureuse
+
+Ces invariants définissent la cible et le protocole de calibration. Ils ne sont
+pas des préconditions bloquantes à l'exécution du pipeline CAVEMAN. Leur mesure
+appartient à AGORA/substrat-bench.
 
 1. **Indépendance réelle des flux** — deux réponses venant du même modèle (ou
    de la même famille d'entraînement) ne comptent pas pour deux perspectives.
@@ -39,19 +43,18 @@ sont des **résultats valides**, pas des défauts à masquer.
 
 ## La trajectoire
 
-- **CAVEMAN (ce POC)** : le produit d'appel. Prompt → plusieurs IA free via
-  Omniroute → réponses structurées → synthèse. Baseline mesurable, pas chère.
-- **banc-essai ETAU/SECS** : l'étape de validation expérimentale (métriques
-  M01-M10, isolation, granularité de confiance).
-- **AGORA** : le produit de luxe, débat contradictoire entre agents
-  hétérogènes + juge, coûteux en tokens, pas encore calibré. **Hors périmètre
-  aujourd'hui.**
+- **ETAU-CAVEMAN avec Omniroute** : prompt reformulé → 3+ substrats → réponses
+  structurées → synthèse. Pipeline exécutable; aucune preuve d'indépendance.
+- **AGORA/substrat-bench sans Omniroute** : calibration séparée, métriques
+  M01-M10, isolation et mesure d'indépendance. **Hors périmètre aujourd'hui.**
+- **Ruflo** : orchestration et scheduling des projets qui lui sont confiés;
+  feedback loop parallèle, sans rôle de calibration.
 - **ETAU version ultime** (TI-360, TOML, graphe Source→Extraction→Decision) :
   la cible lointaine. **Hors périmètre aujourd'hui.**
 
 ## Ce que je construis aujourd'hui (session 2026-08-09)
 
-La **cuisine ETAU** du produit d'appel : le pipeline et les templates qui se
+La **cuisine CAVEMAN** du produit d'appel : le pipeline et les templates qui se
 tiennent entre le prompt du client et le résultat qui lui est renvoyé —
 pensés pour être réutilisés tels quels quand AGORA sera prêt.
 
@@ -100,12 +103,12 @@ Ces découvertes sont issues de la session et doivent orienter la production.
 
 ## Résultats réels P2 (session 2026-08-09, sans quota OpenRouter)
 
-> **VERROU SUBSTRATS (2026-08-09) — 3 substrats pleinement indépendants, PAS 4.**
-> Santé vérifiée sur `call_logs` 24h (requête SQLite : `omniroute-guide.md` §11) :
+> **ÉTAT OPÉRATIONNEL, PAS CALIBRATION.** Santé observée sur `call_logs` 24h
+> (requête SQLite : `omniroute-guide.md` §11) :
 > groq/llama-3.3-70b-versatile 22/22, mistral/mistral-small-latest 17/17,
-> cerebras/gemma-4-31b 8/8. Le 4e rôle (diverse = groq/openai/gpt-oss-120b)
-> partage le provider groq → ce n'est PAS une 4e famille indépendante. Une 4e
-> indépendance exigerait une 4e clé (openai, anthropic, …).
+> cerebras/gemma-4-31b 8/8. Ces taux établissent la disponibilité passée des
+> endpoints, pas leur indépendance épistémique; AGORA/substrat-bench tranche ce
+> point séparément.
 >
 > Exclusions explicites (verrouillées dans `src/schemas.py`) : `openrouter/*:free`
 > (quota free-models-per-day épuisé, non fiable), `cerebras/zai-glm-4.7`
@@ -114,15 +117,15 @@ Ces découvertes sont issues de la session et doivent orienter la production.
 ### Health-check pré-run (ajout 2026-08-09)
 
 Avant chaque run, l'orchestrateur ping les 3 providers retenus (PONG
-`max_tokens=5`, parallèle, sans retry) : un provider down **bloque le run
-proprement** au lieu d'éclater en plein. Résultat dans `metadata.health_check`.
-C'est la traduction de l'invariant 1 (indépendance) en garde-fou opérationnel.
+`max_tokens=5`, parallèle, sans retry) : un provider down arrête proprement le
+run au lieu d'éclater en plein. Résultat dans `metadata.health_check`. Ce test
+mesure la connectivité uniquement, jamais l'indépendance.
 
 ### Runs validés (0 échec d'extraction)
 
 - **Run 1** (`results/run_20260809_154408.json`) — 10,5 s, question "limites des
   LLM pour la recherche" : 3 accords, 5 findings gradués dont **1 FORT** soutenu
-  par 3 familles indépendantes.
+  par 3 réponses configurées.
 - **Run 2** (`results/run_20260809_154455.json`) — 36 s, question "limites
   épistémiques des IA et stratégie" : 3 accords, 5 findings gradués dont
   **2 FORT** (3 familles, puis 2 familles).
@@ -135,6 +138,13 @@ Les résultats complets (réponses brutes par famille + synthèse graduée)
 sont dans `results/`. Non-convergences et zones ouvertes sont signalées en
 l'état, jamais clôturées de force (invariant 5).
 
-> **Note** : le run complet inclut DeepSeek par défaut (5e famille bonus, API
-> directe hors Omniroute). Pour un run strictement sur les 3 substrats
-> Omniroute : `families=["na","asia","eu","diverse"]`.
+> **Note historique** : certains runs incluent DeepSeek en API directe. Le
+> pipeline demandé ici utilise strictement au moins 3 substrats Omniroute :
+> `families=["na","asia","eu"]`.
+
+## Horizon de convergence — direction seulement
+
+CAVEMAN reste exécutable indépendamment de la calibration. Lorsque
+AGORA/substrat-bench aura produit des mesures exploitables, CAVEMAN pourra
+consommer cette calibration, puis converger progressivement vers ETAU rigoureux.
+Cette trajectoire ne fusionne pas les trois feedback loops aujourd'hui.

@@ -13,23 +13,24 @@ minimale d'ETAU, pour établir une baseline mesurable avant toute version rigour
 
 ## Ce que CAVEMAN fait
 
-1. Une question est soumise en parallèle aux familles NA / Asie / Europe / diverse
-2. Chaque famille appelle un modèle via **Omniroute** (localhost:20128), en
+1. Un LLM reformule la demande en prompt de recherche approfondie
+2. Le prompt est soumis en parallèle à au moins 3 substrats configurés
+3. Chaque famille appelle un modèle via **Omniroute** (localhost:20128), en
    parallèle réel, avec garde-fou wall-clock (`CALL_TIMEOUT_S = 120`)
-3. Chaque réponse est **structurée en JSON** (findings gradués FORT/PROBABLE/FAIBLE
+4. Chaque réponse est **structurée en JSON** (findings gradués FORT/PROBABLE/FAIBLE
    + statut épistémique Belnap T/F/B/N) — extraction `build_extraction_prompt_short()`
    pour les modèles reasoning (DeepSeek), template JSON sans accolades doublées
-4. Un **health-check** ping les providers retenus **avant** l'extraction — un
+5. Un **health-check** ping les providers retenus **avant** l'extraction — un
    échec bloque le run proprement au lieu d'éclater en plein (voir §Santé)
-5. Un seul modèle synthétise les réponses : accords, désaccords, angles morts
+6. Un 4e appel LLM synthétise les réponses : accords, désaccords, angles morts
 
 ## Substrats — état vérifié au 2026-08-09
 
-> **3 substrats pleinement indépendants, PAS 4.** Le 4e rôle (diverse) partage
-> le provider groq (openai/gpt-oss-120b est un substrat de fondation OpenAI,
-> mais il route par la même connexion groq). Ne pas présenter CAVEMAN comme
-> « 4 familles indépendantes » : ce serait faux. Une 4e indépendance exigerait
-> une 4e clé (openai, anthropic, …).
+> **Cadrage corrigé** : CAVEMAN exige au moins 3 modèles configurés distincts
+> pour exécuter son pipeline. Il ne mesure ni ne prouve leur indépendance
+> épistémique. Cette calibration appartient exclusivement à
+> **AGORA/substrat-bench**, sans Omniroute. Les chiffres ci-dessous décrivent la
+> santé opérationnelle observée, pas une validation d'indépendance.
 
 | Rôle | Modèle | Santé vérifiée (call_logs 24h) |
 |---|---|---|
@@ -50,8 +51,8 @@ minimale d'ETAU, pour établir une baseline mesurable avant toute version rigour
 
 ## Ce que CAVEMAN ne fait PAS (limites assumées)
 
-- Pas de vérification d'indépendance réelle entre les flux — et aujourd'hui on a
-  **3 substrats indépendants, pas 4** (limite assumée, documentée, non maquillée)
+- Pas de calibration ni de preuve d'indépendance : hors scope CAVEMAN, traité
+  séparément par AGORA/substrat-bench
 - Pas de statut épistémique gradué sur toutes les affirmations (gradué en synthèse)
 - La synthèse n'est pas contradictoire (un seul modèle juge, pas un arbitrage croisé)
 - "Perspective asiatique/européenne" = persona sur un modèle donné, pas garantie
@@ -63,6 +64,8 @@ minimale d'ETAU, pour établir une baseline mesurable avant toute version rigour
 nix-shell
 python scripts/model_bench.py            # bench multi-providers via Omniroute
 python src/orchestrator.py "Ta question ici"
+/home/andrei/Projects/64_ETAU_CAVEMAN/.venv/bin/python \
+  ../65_OMNIROUTE/scripts/recherche_hypotheses_stub.py "Ta question ici"
 ```
 
 > `orchestrator.py` à la racine est OBSOLÈTE (v1 OpenRouter, vidé) — le pipeline
@@ -121,3 +124,16 @@ autour du service (non fait, non nécessaire aujourd'hui).
 POC — sert à établir une baseline comparable à une future implémentation
 rigoureuse d'ETAU. Les résultats de CAVEMAN ne doivent pas être traités comme
 des conclusions de recherche fiables, seulement comme des points de comparaison.
+
+## Horizon de convergence — non construit dans cette session
+
+Trois feedback loops restent distincts et parallèles :
+
+1. **ETAU-CAVEMAN + Omniroute** : pipeline de recherche approfondie exécutable.
+2. **AGORA/substrat-bench sans Omniroute** : calibration indépendante des
+   substrats et mesure expérimentale.
+3. **Ruflo** : orchestration/scheduling des projets explicitement confiés.
+
+À moyen terme, CAVEMAN pourra intégrer les résultats calibrés d'AGORA puis
+converger vers ETAU rigoureux. Cet horizon n'autorise aujourd'hui ni fusion des
+projets, ni import des conclusions de substrat-bench dans CAVEMAN.

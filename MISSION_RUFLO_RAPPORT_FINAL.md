@@ -8,25 +8,21 @@
 
 ---
 
-## 1. Stub — BLOQUÉ (confirmé, aucun contournement tenté)
+## 1. Pipeline CAVEMAN — LIVRÉ, TESTÉ hors Ruflo
 
-**Verdict : Ruflo ne débloque pas le blocage épistémique du stub.**
+**Verdict corrigé : CAVEMAN exécute le pipeline; la validation épistémique
+appartient à AGORA/substrat-bench et ne bloque pas son exécution.**
 
-- Le stub (`65_OMNIROUTE/scripts/recherche_hypotheses_stub.py`) exige de prouver
-  que 2-3 combos Omniroute servent des modèles **réellement indépendants**.
-- Ruflo ne fournit pas cette preuve : son consensus (BFT/Raft/Gossip/CRDT) est un
-  protocole de **coordination entre agents d'un swarm**, pas un croisement
-  épistémique des modèles sous-jacents.
-- Aucune clé API sur la machine → aucun appel multi-provider réel possible.
-- **Nouveauté cette session (éclaircie)** : la voie env
-  `OPENROUTER_BASE_URL`/`--endpoint` → Omniroute existe désormais côté CLI v3.34,
-  mais Omniroute répond **SSE par défaut** même sans `stream:true`, et Ruflo
-  n'envoie jamais `stream:false` → `res.json()` échoue. La connexion transport
-  reste donc bloquée par le SSE, indépendamment de la config. **Décision :
-  ne pas construire de proxy-wedge** — même réparé, il ne résout pas la question
-  d'indépendance épistémique. Effort mal ciblé.
-- Prochaine étape réelle (indépendante de Ruflo) : tester 2-3 combos Omniroute
-  explicitement distincts et mesurer l'indépendance de leurs réponses.
+- `65_OMNIROUTE/scripts/recherche_hypotheses_stub.py` (nom historique conservé)
+  reformule la question, appelle trois modèles configurés via Omniroute, puis
+  délègue la synthèse à l'orchestrateur ETAU/CAVEMAN.
+- Test réel du 2026-08-09 : Mistral a reformulé; Groq, Mistral et Cerebras ont
+  tous répondu; la synthèse a réussi en 18,4 s, coût estimé $0.
+- Ruflo n'est pas dans ce chemin LLM. Son transport SSE reste une limite connue
+  pour ses propres workers AI, mais elle n'est ni un blocage CAVEMAN ni une
+  raison de confondre pipeline et calibration.
+- La mesure d'indépendance, l'isolation et la calibration des substrats restent
+  du ressort d'AGORA/substrat-bench, sans Omniroute.
 
 ## 2. Scheduling (batch heures creuses / coût-quota) — LIVRÉ, TESTÉ
 
@@ -50,17 +46,21 @@ dans 64_ETAU_CAVEMAN.**
   (pas de fenêtre « 2 h–6 h » native). Si besoin futur : timer systemd autour
   du service.
 
-## 3. Veille (surveillance intelligente) — HORS PORTÉE, À REPRENDRE
+## 3. Veille promo — SYSTEMD CONSERVÉ, TESTÉ À $0
 
-**Verdict : bloquée par l'absence de clé LLM, pas par Ruflo.**
+**Verdict : ne pas migrer vers Ruflo; le timer systemd-user est plus simple à
+maintenir pour ce script arbitraire.**
 
-- Ruflo peut orchestrer de la veille (workers `map`/`audit`/`testgaps`,
-  metaharness `drift-from-history`, task-observer scanner local), mais toute
-  veille « intelligente » (résumé, priorisation sémantique) exige un appel LLM.
-- **Aucune clé API sur la machine** → pas de test réel possible aujourd'hui.
-- **Reprise documentée** : quand une clé sera disponible, la chaîne probable est
-  daemon (intervalles) + workers dédiés + budget, sur le modèle du besoin 2 déjà
-  livré. Les workers et le budget sont déjà en place ; il ne manque que la clé.
+- Le daemon Ruflo courant est propriétaire du workspace 64 et expose sept
+  workers internes prédéfinis; il n'est pas un ordonnanceur générique de
+  commandes Python.
+- Une migration demanderait un worker Ruflo personnalisé et un second daemon ou
+  un changement de portée workspace. Le timer existant exprime directement la
+  cadence, `Persistent=true`, le rétablissement après reboot et le journal.
+- L'interprétation ponctuelle passe par Omniroute local vers un tier gratuit;
+  aucun provider payant et coût observé/estimé $0.
+- Le service a été corrigé pour retourner succès après un changement traité :
+  le code `1` signalait auparavant à tort un échec systemd.
 
 ## 4. Heartbeat (connexions inter-harnais Claude Code ↔ Codex ↔ OpenCode) — PAS DE PONT NATIF
 
@@ -87,10 +87,10 @@ dans 64_ETAU_CAVEMAN.**
 
 | Besoin | Verdict | Nature |
 |---|---|---|
-| 1. Stub (indépendance épistémique) | BLOQUÉ | non-livrable, cause prouvée |
+| 1. Pipeline CAVEMAN | **LIVRÉ + TESTÉ** | hors Ruflo; 3 substrats + synthèse |
 | 2. Scheduling batch/coût | **LIVRÉ + TESTÉ** | livrable fonctionnel |
-| 3. Veille | HORS PORTÉE | dépend d'une clé LLM |
+| 3. Veille promo | **SYSTEMD CONSERVÉ + TESTÉ** | migration Ruflo plus complexe |
 | 4. Heartbeat inter-harnais | PAS DE PONT NATIF | non-livrable, cause prouvée |
 
-Règle appliquée : 1 besoin réellement livré et testé (scheduling), 3 verdicts
-négatifs documentés avec leur cause — **le négatif documenté vaut le positif**.
+Règle appliquée : Ruflo orchestre les projets qui lui sont confiés; il ne sert
+ni de couche de calibration AGORA ni de remplacement systématique à systemd.
