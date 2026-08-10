@@ -68,6 +68,19 @@ python src/orchestrator.py "Ta question ici"
   ../65_OMNIROUTE/scripts/recherche_hypotheses_stub.py "Ta question ici"
 ```
 
+### Interface web locale
+
+```bash
+nix-shell
+python web/app.py
+```
+
+Ouvrir ensuite <http://127.0.0.1:8766>. Saisir une question puis cliquer sur
+**Lancer** : la page affiche « En cours… », puis la synthèse et trois réponses
+repliables. Le prompt reformulé est aussi consultable dans un panneau. Le
+serveur écoute strictement sur localhost, sans compte ni
+authentification. Pour choisir un autre port : `python web/app.py --port 9000`.
+
 > `orchestrator.py` à la racine est OBSOLÈTE (v1 OpenRouter, vidé) — le pipeline
 > réel est `src/orchestrator.py` + `src/schemas.py`. Les refs restantes dans
 > `brainstorming/` sont des notes historiques.
